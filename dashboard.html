@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Cloud Drive</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        ☁️ My Cloud
+    </div>
+
+    <div class="user-area">
+
+        <span id="userEmail">
+            Loading...
+        </span>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <section class="welcome">
+
+        <div>
+            <h1>My Cloud Drive</h1>
+
+            <p>
+                Upload and share files with everyone.
+            </p>
+        </div>
+
+        <label class="upload-btn">
+
+            📤 Upload File
+
+            <input
+                type="file"
+                id="fileInput"
+                hidden
+            >
+
+        </label>
+
+    </section>
+
+
+    <section class="upload-box" id="uploadBox">
+
+        <div class="upload-icon">
+            ☁️
+        </div>
+
+        <h2>Upload your file</h2>
+
+        <p>
+            Select any file from your device
+        </p>
+
+        <label class="select-btn">
+
+            Choose File
+
+            <input
+                type="file"
+                id="fileInput2"
+                hidden
+            >
+
+        </label>
+
+        <div id="uploadStatus"></div>
+
+    </section>
+
+
+    <section class="files-section">
+
+        <div class="files-header">
+
+            <h2>📂 Shared Files</h2>
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search files..."
+            >
+
+        </div>
+
+
+        <div id="filesContainer">
+
+            <div class="loading">
+                Loading files...
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="js/supabase.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
